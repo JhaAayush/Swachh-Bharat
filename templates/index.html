@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home</title>
+    <!-- Replace the CDNs with url_for -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/fontawesome5-overrides.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/applied-css.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Article-Dual-Column.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Projects-Clean.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Team-Boxed.css') }}">
+</head>
+</head>
+
+
+<body id="page-top">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="#page-top">Clean Swipe</a><button data-toggle="collapse"
+                data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i
+                    class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto text-uppercase">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/write">Write</a></li>
+
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/pixart">PixART</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/upload">Upload</a></li>
+
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead"
+        style="background-image:url('https://images.unsplash.com/photo-1536382846503-832f3d8c7742?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80%22');">
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in"><span>Swatch Bharat Mission</span></div>
+                <div class="intro-heading text-uppercase"><span>STEP TOWARDS A CLEAN INDIA</span></div><a
+                    class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" role="button"
+                    href="#services">More</a>
+            </div>
+        </div>
+    </header>
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase section-heading">PUBLIC AWARENESS</h2>
+                    <h3 class="text-muted section-subheading">Cool kids help a warm planet.</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4"><span class="fa-stack fa-4x"><i
+                            class="fa fa-circle fa-stack-2x text-primary"></i><i
+                            class="fa fa-book fa-stack-1x fa-inverse"></i></span>
+                    <h4 class="section-heading">BLOGS</h4>
+                    <p class="text-muted">From Informative discussions to personal accomplishments.</p>
+                </div>
+                <div class="col-md-4"><span class="fa-stack fa-4x"><i
+                            class="fa fa-circle fa-stack-2x text-primary"></i><i
+                            class="fa fa-laptop fa-stack-1x fa-inverse"></i></span>
+                    <h4 class="section-heading">PIX-ART</h4>
+                    <p class="text-muted">Choose a color and start right away.</p>
+                </div>
+                <div class="col-md-4"><span class="fa-stack fa-4x"><i
+                            class="fa fa-circle fa-stack-2x text-primary"></i><i
+                            class="fas fa-tree fa-stack-1x fa-inverse"></i></span>
+                    <h4 class="section-heading">ACCOMPLISHMENTS</h4>
+                    <p class="text-muted">Boost your motivation while reading all these accomplishments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Categories" class="projects-clean" style="margin-bottom: 10px;">
+        <div class="container">
+            <div class="intro">
+                <h1 class="text-center" style="margin: 0px 0px 18px;font-size: 44px;">Blogs</h1>
+            </div>
+            <div class="row projects">
+                <div class="col-sm-6 col-lg-4 item" data-bss-hover-animate="pulse"><a href="/blog"><img
+                            class="img-fluid" src={{ url_for('static', filename="img/categories-thumb/1-thumbnail.jpg"
+                            )}}></a>
+                    <h3 class="name">Understanding Acid Rains</h3>
+                </div>
+                <div class="col-sm-6 col-lg-4 item" data-bss-hover-animate="pulse"><a href="/blog"><img
+                            class="img-fluid" src={{ url_for('static', filename="img/categories-thumb/2-thumbnail.jpg"
+                            )}}></a>
+                    <h3 class="name">Save Water!</h3>
+                </div>
+                <div class="col-sm-6 col-lg-4 item" data-bss-hover-animate="pulse"><a href="/blog"><img
+                            class="img-fluid" src={{ url_for('static', filename="img/categories-thumb/3-thumbnail.jpg"
+                            )}}></a>
+                    <h3 class="name">Major Water Pollutants</h3>
+                </div>
+                <div class="col-sm-6 col-lg-4 item" data-bss-hover-animate="pulse"><a href="/blog"><img
+                            class="img-fluid" src={{ url_for('static', filename="img/categories-thumb/4-thumbnail.jpg"
+                            )}}></a>
+                    <h3 class="name">Disadvantages of Slums</h3>
+                </div>
+                <div class="col-sm-6 col-lg-4 item" data-bss-hover-animate="pulse"><a href="sub-pages/5.html"><img
+                            class="img-fluid" src={{ url_for('static', filename="img/categories-thumb/5-thumbnail.jpg"
+                            )}}></a>
+                    <h3 class="name">Story - 00</h3>
+                </div>
+                <div class="col-sm-6 col-lg-4 item" data-bss-hover-animate="pulse"><a href="sub-pages/6.html"><img
+                            class="img-fluid" src={{ url_for('static', filename="img/categories-thumb/6-thumbnail.jpg"
+                            )}}></a>
+                    <h3 class="name">About Swatch Bharat</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="Team" class="projects-clean" style="margin-bottom: 10px;">
+        <div class="container">
+            <div class="intro">
+                <h1 class="text-center" style="margin: 0px 0px 18px;font-size: 44px;">Pix-Art</h1>
+                <h3 class="text-center name">Let your creativity flow...</h3>
+                <h3 class="text-center text-muted section-subheading">(Currently a Beta Feature)</h3>
+            </div>
+            <div class="row projects">
+                <div class="col-sm-6 col-lg-4 item" data-bss-hover-animate="pulse"><a href="#"><img class="img-fluid"
+                            src={{ url_for('static', filename="img/pix/left.png" )}}></a>
+                </div>
+                <div class="col-sm-6 col-lg-4 item" data-bss-hover-animate="pulse"><a href="/pixart"><img
+                            class="img-fluid" src={{ url_for('static', filename="img/pix/middle.png" )}}></a>
+                    <h3 class="name">Try Out Yourself!</h3>
+                </div>
+                <div class="col-sm-6 col-lg-4 item" data-bss-hover-animate="pulse"><a href="#"><img class="img-fluid"
+                            src={{ url_for('static', filename="img/pix/right.png" )}}></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" style="background-image:url('img/contact-us-img/map-image.png');">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase section-heading">Contact Us</h2>
+                    <h3 class="text-muted section-subheading">Fill the form to contact us</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form id="contactForm" name="contactForm" novalidate="novalidate">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <div class="form-group"><input class="form-control" type="text" id="name"
+                                        placeholder="Your Name *" required=""><small
+                                        class="form-text text-danger flex-grow-1 help-block lead"></small></div>
+                                <div class="form-group"><input class="form-control" type="email" id="email"
+                                        placeholder="Your Email *" required=""><small
+                                        class="form-text text-danger help-block lead"></small></div>
+                                <div class="form-group"><input class="form-control" type="tel"
+                                        placeholder="Your Phone *" required=""><small
+                                        class="form-text text-danger help-block lead"></small></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group"><textarea class="form-control" id="message"
+                                        placeholder="Your Message *" required=""></textarea><small
+                                        class="form-text text-danger help-block lead"></small></div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div><button class="btn btn-primary btn-xl text-uppercase"
+                                    id="sendMessageButton" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"><span class="copyright">Copyright&nbsp;© Clean Swipe 2021</span></div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item"><a class="footer-icons-a" href="https://www.github.com"><i
+                                    class="fab fa-github footer-icons"></i></a></li>
+                        <li class="list-inline-item"><a class="footer-icons-a" href="#"><i
+                                    class="fab fa-google footer-icons"></i></a></li>
+                        <li class="list-inline-item"><a class="footer-icons-a" href="#"><i
+                                    class="fa fa-linkedin footer-icons"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src={{ url_for('static', filename="js/jquery.min.js" )}}></script>
+    <script src={{ url_for('static', filename="bootstrap/js/bootstrap.min.js" )}}></script>
+    <script src={{ url_for('static', filename="js/bs-init.js" )}}></script>
+
+    <script src={{ url_for('static',
+        filename="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" )}}></script>
+    <script src={{ url_for('static', filename="js/agency.js" )}}></script>
+</body>
+
+</html>

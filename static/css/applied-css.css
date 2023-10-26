@@ -1,0 +1,42 @@
+#img-port-1 {
+  height: 217px;
+}
+
+#img-port-2 {
+  height: 217px;
+}
+
+#img-port-3 {
+  height: 217px;
+}
+
+#img-port-4 {
+  height: 217px;
+}
+
+#img-port-5 {
+  height: 217px;
+}
+
+#img-port-6 {
+  height: 217px;
+}
+
+#team {
+  padding: 80px;
+}
+
+#portfolio {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#portfolio-container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+footer li .footer-icons-a:hover {
+  color: #212529;
+}
+

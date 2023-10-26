@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/fontawesome5-overrides.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/applied-css.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Article-Dual-Column.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Projects-Clean.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Team-Boxed.css') }}">
+</head>
+<style>
+    /* Style for the form container */
+    #form-container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    /* Style for the form title */
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    /* Style for the image input */
+    #image-input {
+        display: block;
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    /* Style for the submit button */
+    input[type="submit"] {
+        display: block;
+        margin: 10px 0;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    /* Style for the textarea */
+    textarea {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: vertical;
+    }
+
+    /* Style for the uploaded images section */
+    #uploaded-images {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    /* Style for the uploaded images title */
+    h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    /* Style for the image list container */
+    #image-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* Style for individual uploaded images */
+    #image-list img {
+        max-width: 100%;
+        height: auto;
+        margin: 5px;
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .image-description {
+        text-align: center;
+        margin-bottom: 100px;
+        font-weight: bold;
+    }
+
+    section {
+        background-color: aqua;
+    }
+
+    /* Add spacing between form elements */
+    .container>* {
+        margin-bottom: 10px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="#page-top">Clean Swipe</a><button data-toggle="collapse"
+                data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i
+                    class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto text-uppercase">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/write">Write</a></li>
+
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/pixart">PixART</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/upload">Upload</a></li>
+
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="article-dual-column mt-4">
+        <div class="container mt-4" id="form-container">
+            <h1>Image Upload</h1>
+
+            <!-- Image Upload Form -->
+            <form id="upload-form" enctype="multipart/form-data" method="post">
+                <div class="container" id="uploaded-img">
+                    <input type="file" name="image" id="image-input" accept="image/*">
+                    <input type="submit" value="Upload Image">
+                </div>
+
+                <div class="container mt-4">
+                    <textarea name="description" id="description" cols="40" rows="5"
+                        placeholder="Write a description ..."></textarea>
+
+                </div>
+                <!--Create a textbox input-->
+            </form>
+
+            <!-- Display Uploaded Images -->
+            <div id="uploaded-images">
+                <h1>Uploaded Images</h1>
+                <div id="image-list"></div>
+
+            </div>
+
+            <script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+        </div>
+    </section>
+    <script src={{ url_for('static', filename="js/jquery.min.js" )}}></script>
+    <script src={{ url_for('static', filename="bootstrap/js/bootstrap.min.js" )}}></script>
+    <script src={{ url_for('static', filename="js/bs-init.js" )}}></script>
+    <script src={{ url_for('static',
+        filename="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" )}}></script>
+    <script src={{ url_for('static', filename="js/agency.js" )}}></script>
+</body>
+
+</html>

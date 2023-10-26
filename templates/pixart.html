@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/style.css" )}}">
+    <title>Pix-Art</title>
+    <!--<script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <button class="btn">Reset</button>
+        <input type="color" value="#abcdef" class="color">
+        <input type="number" value="30" class="size">
+        <button class="btn3" id="capture">Save</button>
+    </div>
+    <div class="container">
+    </div>
+    
+        <script src={{ url_for('static', filename="js/main.js" )}}></script>
+
+</body>
+
+</html>

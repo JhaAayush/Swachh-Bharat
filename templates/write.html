@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Write Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/fontawesome5-overrides.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/applied-css.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Article-Dual-Column.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Projects-Clean.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Team-Boxed.css') }}">
+<!-- Place the first <script> tag in your HTML's <head> -->
+<script src="https://cdn.tiny.cloud/1/aoualkn4vescbtom6lgdhvnx1tdyf69d62pi9fb2fz82kzwk/tinymce/6/tinymce.min.js"
+    referrerpolicy="origin"></script>
+</head>
+<style>
+      h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="#page-top">Clean Swipe</a><button data-toggle="collapse"
+                data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i
+                    class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto text-uppercase">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/write">Write</a></li>
+
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/pixart">PixART</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/upload">Upload</a></li>
+
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="article-dual-column mt-4">
+        <div class="container mt-4" id="form-container">
+
+            <!-- Image Upload Form -->
+            <form id="blog-write" for="blog-write" enctype="multipart/form-data" method="post">
+                <div class="container">
+                   <h1><label for="blog-title">Title: </label>
+                <input type="text" name="blogTitle" id="blog-title"></h1> 
+                    <!-- Place the following <script> and <textarea> tags your HTML's <body> -->
+                    <script>
+                        tinymce.init({
+                            selector: 'textarea',
+                            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+                            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+                        });
+                    </script>
+                    
+                    <textarea name="blogBody" id="blogBody" rows="40" placeholder="Tell us your thoughts ...">
+                    </textarea>
+                    <button type="submit" class="btn btn-outline-dark mt-4">Create Blog</button>
+
+                </div>
+                <!--Create a textbox input-->
+            </form>
+
+            <!-- Display Uploaded Images -->
+        
+
+            
+        </div>
+    </section>  
+    <script src="{{ url_for('static', filename='js/blog.js') }}"></script>
+    <script src={{ url_for('static', filename="js/jquery.min.js" )}}></script>
+    <script src={{ url_for('static', filename="bootstrap/js/bootstrap.min.js" )}}></script>
+    <script src={{ url_for('static', filename="js/bs-init.js" )}}></script>
+    <script src={{ url_for('static',
+        filename="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" )}}></script>
+    <script src={{ url_for('static', filename="js/agency.js" )}}></script>
+</body>
+
+</html>
